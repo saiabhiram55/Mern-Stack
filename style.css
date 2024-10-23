@@ -1,0 +1,76 @@
+/* Reset some default browser styles */
+body, h2, form, label, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a background color for the body */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Outer container styling */
+.outer {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    width: 300px;
+}
+
+/* Form title styling */
+.outer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Inner form styling */
+form.inner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+form.inner label {
+    margin-bottom: 5px;
+    color: #333333;
+    font-weight: bold;
+}
+
+/* Input styling */
+form.inner input[type="text"],
+form.inner input[type="email"],
+form.inner input[type="number"],
+form.inner input[type="date"],
+form.inner input[type="password"],
+form.inner input[list="branches"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Submit button styling */
+form.inner input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+form.inner input[type="submit"]:hover {
+    background-color: #45a049;
+}
