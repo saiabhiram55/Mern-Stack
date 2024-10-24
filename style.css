@@ -7,7 +7,7 @@ body, h2, form, label, input {
 
 /* Set a background color for the body */
 body {
-    background-color: #f0f2f5;
+    background-color: #5592ee;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 
 /* Outer container styling */
 .outer {
-    background-color: #ffffff;
+    background-color: #854646;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px 30px;
