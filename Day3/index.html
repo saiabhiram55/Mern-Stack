@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form class="login-form">
+    <form class="login-form" onsubmit="Login(event)">
         <!-- <label for="Email">Enter ur Email: </label> -->
-        <input type="email" name="" id=""  class="login-input" placeholder="Email" required/>
+        <input type="email" name="" id="email"  class="login-input" placeholder="Email" required/>
         <br>
         <!-- <label for="Email">Enter ur Password: </label> -->
-        <input type="password" name="" id="" class="login-input"  placeholder="password" required/>
+        <input type="password" name="" id="password" class="login-input"  placeholder="password" required/>
         <br>
         <input type="submit" value="Login" class="login-btn"/>
     </form>
+    <!-- <button class="login-btn" onclick="myfunction()"> click</button> -->
     <script>
         console.log("Hello");
         alert("Hello");
@@ -40,9 +41,55 @@
             loc:"c",
             age:400, 
         }
+
+        console.log(obj2.name);
+        const{ name,age,loc}=obj2
+        console.log(name)
+
         console.log(obj,obj2);
         let arr=["a",obj,x,obj2];
         console.log(arr);
+        let arr2=[1,2,3,4,5,6];
+        let arr3=[arr,"asdfgh","49",arr2];
+        console.log(arr3);
+        let arr4=[...arr,...arr2]; //spread operation
+        console.log(arr4);
+        function myfunction(){
+            console.log("hello");
+            console.log("hello");
+        }
+        // myfunction();
+        function Login(event){
+            event.preventDefault()
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;     //shift +alt+down arrow
+            console.log("Login : "+email + " " +password);
+            if (password.lenght < 5){
+                alert("password should contain more than 5 letters")
+            }
+            else if(email=="admin@gmail.com"&& password=="123456"){
+                alert("Login succes !");
+                API()
+            }else{
+                alert("invalid credentials")
+            }
+        }
+
+        async function API() {
+            //application programming inferace commincation to servers 
+            console.log("called API");
+            try {
+                const reponse = await fetch("https://671b711a2c842d92c37fee38.mockapi.io/abhiram/products")
+                if (response.status===200){
+                    console.log("success")
+                    console.log(await response.json())
+                }
+    
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        API()
 
 
     </script>
