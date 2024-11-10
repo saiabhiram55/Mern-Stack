@@ -1,9 +1,17 @@
-import React from 'react'
+import HomeCards from "../components/Homecards"
+import HomeCarousel from "../components/HomeCarousel"
+import SocialCard from "../components/SocialCard"
 
-const home = () => {
-  return (
-    <div>home</div>
-  )
+const Home = () => {
+    return (
+        <>
+            <div className="flex flex-col justify-start items-start gap-8 w-screen h-full">
+                <HomeCarousel />
+                <HomeCards />
+                <SocialCard />
+            </div>
+        </>
+    )
 }
 
-export default home
+export default Home
