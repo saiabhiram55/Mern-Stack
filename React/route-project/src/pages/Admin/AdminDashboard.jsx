@@ -1,9 +1,11 @@
 import React from 'react'
-import AdminDashboardcards from '../../components/Admin/AdminDashboardcards'
+import AdminDashboardHomeCards from '../../components/Admin/AdminDashboardHomeCards'
 
 const AdminDashboard = () => {
   return (
-    <AdminDashboardcards />
+    <div className='w-full min-h-[80vh] flex justify-center items-center'>
+      <AdminDashboardHomeCards />
+    </div>
   )
 }
 
